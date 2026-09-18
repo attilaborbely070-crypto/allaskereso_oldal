@@ -200,7 +200,7 @@ Az ismételt, szükségtelen AI lekérdezések elkerülése érdekében a rendsz
 
 ## 5. Technológiák
 
-### Frontend
+### 5.1. Frontend
 
 A felhasználói felület kialakításához az alábbi technológiákat használjuk:
 
@@ -213,7 +213,7 @@ A Bootstrap 5 elsősorban a reszponzív elrendezés és a komponensek kialakít�
 
 A JavaScript a dinamikus felhasználói interakciókat és az oldal egyes háttérben végrehajtott kéréseit kezeli.
 
-### Backend
+### 5.2. Backend
 
 A backend XAMPP környezetben futó PHP segítségével készül.
 
@@ -229,7 +229,7 @@ A PHP felel többek között:
 * az API-szerű végpontok működtetéséért
 * az AI API-val történő kommunikációért
 
-### Adatbázis
+### 5.3. Adatbázis
 
 Az alkalmazás adatait MySQL adatbázis tárolja, amelyet fejlesztés közben phpMyAdmin segítségével kezelünk.
 
