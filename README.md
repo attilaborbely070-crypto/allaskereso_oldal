@@ -134,3 +134,122 @@ A keresés és szűrés több szempont alapján történhet, például:
 
 Az álláshirdetések részletes oldalán megjelennek a munkakör legfontosabb adatai, a munkáltató adatai, a munkavégzés helye, a fizetési tartomány és a munkakör követelményei.
 
+### 4.4. Álláshirdetések kezelése
+
+A munkáltatók saját vállalati profiljukon keresztül álláshirdetéseket hozhatnak létre.
+
+A hirdetéshez megadható:
+
+* munkakör megnevezése
+* rövid és részletes leírás
+* munkavégzés helye
+* kategória
+* teljes vagy részmunkaidő
+* hétvégi munkavégzés
+* műszakbeosztás
+* minimális végzettség
+* szükséges szakmai tapasztalat
+* szükséges készségek
+* szükséges nyelvismeret
+* egyéb követelmények
+* minimális és maximális fizetés.
+
+A létrehozott álláshirdetés alapértelmezett érvényességi ideje 30 nap.
+
+A lejárt hirdetésekre a rendszer nem enged új jelentkezést.
+
+### 4.5. Jelentkezések kezelése
+
+A munkavállaló egy álláshirdetés részletes oldaláról jelentkezhet a meghirdetett pozícióra.
+
+A rendszer ellenőrzi, hogy a felhasználó jogosult-e a jelentkezésre, rendelkezik-e szükséges önéletrajzzal, illetve korábban jelentkezett-e már ugyanarra az állásra.
+
+Egy munkavállaló ugyanarra az álláshirdetésre csak egyszer jelentkezhet.
+
+A jelentkezéshez kapcsolódóan a rendszer eltárolja többek között:
+
+* a jelentkező személyét
+* az álláshirdetést
+* a jelentkezéshez használt önéletrajzot
+* a jelentkezés időpontját
+* a jelentkezés aktuális státuszát.
+
+A munkáltató a jelentkezések státuszát kezelheti, például megtekintett, elfogadott vagy elutasított állapotokra módosíthatja.
+
+### 4.6. AI alapú értékelés
+
+A rendszer egyik kiemelt funkciója az AI alapú jelöltértékelés.
+
+Az értékelés során a rendszer összeveti az álláshirdetésben megadott követelményeket a jelentkező szakmai profiljával.
+
+Az értékelés eredménye tartalmazhat:
+
+* 0–100 közötti megfelelési pontszámot
+* rövid összefoglalót
+* a jelentkező erősségeit
+* a hiányzó követelményeket
+* részletes szöveges magyarázatot.
+
+Az értékelés célja a munkáltató munkájának támogatása és a jelentkezők közötti információfeldolgozás megkönnyítése.
+
+Az AI eredménye nem helyettesíti a munkáltató döntését. A végső kiválasztási döntést a munkáltató hozza meg.
+
+Az ismételt, szükségtelen AI lekérdezések elkerülése érdekében a rendszer az értékelések eredményét adatbázisban tárolhatja.
+
+---
+
+## 5. Technológiák
+
+### Frontend
+
+A felhasználói felület kialakításához az alábbi technológiákat használjuk:
+
+* HTML5
+* Bootstrap 5
+* Tailwind CSS
+* JavaScript.
+
+A Bootstrap 5 elsősorban a reszponzív elrendezés és a komponensek kialakítását támogatja. A Tailwind CSS utility osztályai az egyes egyedi vizuális megoldások kialakításában használhatók.
+
+A JavaScript a dinamikus felhasználói interakciókat és az oldal egyes háttérben végrehajtott kéréseit kezeli.
+
+### Backend
+
+A backend XAMPP környezetben futó PHP segítségével készül.
+
+A PHP felel többek között:
+
+* a felhasználók kezeléséért
+* a munkamenetekért
+* a jogosultságok ellenőrzéséért
+* az adatbázis-műveletekért
+* az álláshirdetések kezeléséért
+* a jelentkezések feldolgozásáért
+* a fájlfeltöltések kezeléséért
+* az API-szerű végpontok működtetéséért
+* az AI API-val történő kommunikációért
+
+### Adatbázis
+
+Az alkalmazás adatait MySQL adatbázis tárolja, amelyet fejlesztés közben phpMyAdmin segítségével kezelünk.
+
+Az adatbázis több, egymással kapcsolatban álló táblát tartalmaz, például:
+
+* `users`
+* `employee_profiles`
+* `employer_profiles`
+* `work_experiences`
+* `skills`
+* `user_skills`
+* `languages`
+* `user_languages`
+* `resumes`
+* `jobs`
+* `job_required_skills`
+* `job_required_languages`
+* `applications`
+* `ai_evaluations`
+* `email_verifications`
+* `expiry_notifications`
+
+Az adatbázisban elsődleges és idegen kulcsok biztosítják a táblák közötti kapcsolatokat.
