@@ -253,3 +253,16 @@ Az adatbázis több, egymással kapcsolatban álló táblát tartalmaz, példáu
 * `expiry_notifications`
 
 Az adatbázisban elsődleges és idegen kulcsok biztosítják a táblák közötti kapcsolatokat.
+
+## 6. Reszponzív kialakítás
+
+A JobFlow felülete reszponzív kialakítású, ezért különböző képernyőméreteken is használható.
+
+Az asztali nézetben a rendszer többoszlopos elrendezést alkalmazhat, például keresési és szűrési területet, központi álláslistát és kiegészítő információkat tartalmazó oldalsávot.
+
+Kisebb kijelzőkön az elemek egymás alá rendeződnek, a navigáció és az űrlapok pedig mobil eszközön is használható formában jelennek meg.
+
+A reszponzív kialakítás megvalósításában elsősorban a Bootstrap 5 grid rendszere és komponensei kapnak szerepet.
+
+
+
